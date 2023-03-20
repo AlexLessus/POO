@@ -1,44 +1,32 @@
-public class Herramienta {
+//La clase Trabajador contendrá los atributos idTrabajador (int), nombre (String) y puesto (String), 
+public class Trabajador {
    private int id;
    private String nombre;
-   private String marca;
-   private char estado;
+   private String puesto;
    
-   public Herramienta(int id, String nombre, String marca, char estado) {
+   //un constructor que reciba información para inicializar a todos los atributos
+   public Trabajador(int id, String nombre, String puesto) {
       this.id = id;
       this.nombre = nombre;
-      this.marca = marca;
-      this.estado = estado;
-   }
+      this.puesto = puesto;
+   } 
    
+   //métodos get para cada atributo 
    public int getId() {
-      return id;
+      return id;  
    }
    public String getNombre() {
-      return nombre;
+      return nombre;   
    }
-   public String getMarca() {
-      return marca;
-   }
-   public char getEstado() {
-      return estado;
+   public String getPuesto() {
+      return puesto;
    }
    
-   public void setEstado(char estado) {
-      this.estado = estado;
-   }
+   //el método toString.
    public String toString() {
       return "Datos del trabajador\n" + 
              "ID----: " + id + "\n" +
              "Nombre: " + nombre + "\n" +
-             "Marca-: " + marca + "\n" +
-             "Estado: " + estado();    
-   }
-   
-   private String estado() {
-      if(estado == 'P') 
-         return "Prestada";
-      else
-         return "Disponible"; 
+             "Puesto: " + puesto;    
    }
 }
