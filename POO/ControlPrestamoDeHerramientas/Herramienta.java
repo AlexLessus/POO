@@ -24,12 +24,21 @@ public class Herramienta {
       return estado;
    }
    
+   public void setEstado(char estado) {
+      this.estado = estado;
+   }
    public String toString() {
       return "Datos del trabajador\n" + 
              "ID----: " + id + "\n" +
              "Nombre: " + nombre + "\n" +
              "Marca-: " + marca + "\n" +
-             "Estado: " + estado;    
+             "Estado: " + estado();    
    }
    
+   private String estado() {
+      if(estado == 'P') 
+         return "Prestada";
+      else
+         return "Disponible"; 
+   }
 }
