@@ -57,11 +57,22 @@ public class ControlPrestamos {
       }
       return -1;
    }
+   public int busquedaPrestamo(int id) {
+      for(int i = 0; i < contPrestamo; i++) {
+         if(prestamos[i].getNumPrestamo() == id) {
+            return i;
+         }
+      }
+      return -1;
+   }
    
    public Trabajador getTrabajador(int celda) {
       return trabajadores[celda];
    }
    public Herramienta getHerramienta(int celda) {
       return herramientas[celda];
+   }
+   public Prestamo getPrestamo(int celda) {
+      return prestamos[celda];
    }
 }
