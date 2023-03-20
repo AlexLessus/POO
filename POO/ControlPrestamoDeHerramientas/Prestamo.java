@@ -6,11 +6,12 @@ public class Prestamo {
    private String fechaDevolucion;
    private char estado;
    
-   public Prestamo(int numPrestamo, int idTrabajador, int idHerramienta, String fechaPrestamo, char estado) {
+   public Prestamo(int numPrestamo, int idTrabajador, int idHerramienta, String fechaPrestamo, String fechaDevolucion, char estado) {
       this.numPrestamo = numPrestamo;
       this.idTrabajador = idTrabajador;
       this.idHerramienta = idHerramienta;
       this.fechaPrestamo = fechaPrestamo;
+      this.fechaDevolucion = fechaDevolucion;
       this.estado = estado;
    }
    
@@ -26,7 +27,7 @@ public class Prestamo {
    public String getFechaPrestamo() {
       return fechaPrestamo;
    }
-   public String getFechDevolucion() {
+   public String getFechaDevolucion() {
       return fechaDevolucion;
    }
    public char getEstado() {
